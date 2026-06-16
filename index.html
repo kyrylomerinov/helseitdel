@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brønnøy kommune helsestasjonen - IT Service Desk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>Brønnøy kommune helsestasjonen — ITIL Hendelseshåndtering</h2>
+        <div id="user-info" class="hidden">
+            <span id="user-email"></span> (<span id="user-role"></span>)
+            <button id="logout-btn">Logg ut</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="auth-screen" class="card">
+            <h3>Logg inn</h3>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="E-post (@bronnoy.kommune.no)" required>
+                <input type="password" id="login-password" placeholder="Passord" required>
+                <button type="submit">Logg inn</button>
+            </form>
+            <p id="auth-error" class="error"></p>
+        </section>
+
+        <section id="client-screen" class="hidden">
+            <div class="card">
+                <h3>Registrer ny IT-hendelse (Meld feil)</h3>
+                <form id="ticket-form">
+                    <input type="text" id="ticket-title" placeholder="Kort sammendrag (f.eks. PC starter ikke)" required>
+                    
+                    <label for="ticket-category">Kategori:</label>
+                    <select id="ticket-category">
+                        <option value="Maskinvare (Hardware)">Maskinvare (Hardware)</option>
+                        <option value="Programvare (Software)">Programvare (Software)</option>
+                        <option value="Nettverk">Nettverk</option>
+                        <option value="Brukerstøtte">Annet / Brukerstøtte</option>
+                    </select>
+
+                    <textarea id="ticket-desc" placeholder="Beskriv problemet så nøye som mulig..." rows="4" required></textarea>
+                    <button type="submit">Send inn sak</button>
+                </form>
+            </div>
+
+            <h3>Mine registrerte saker</h3>
+            <div id="client-tickets-list"></div>
+        </section>
+
+        <section id="agent-screen" class="hidden">
+            <h3>Alle aktive IT-hendelser i kommunen</h3>
+            <div id="agent-tickets-list"></div>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
