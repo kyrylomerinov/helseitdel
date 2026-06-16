@@ -4,12 +4,12 @@ import { getFirestore, collection, addDoc, query, where, onSnapshot, updateDoc, 
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBnqKbZyt3ignhAEr2YeYTy0AKt3ZcXtPM",
-  authDomain: "bronnoy-itil-system.firebaseapp.com",
-  projectId: "bronnoy-itil-system",
-  storageBucket: "bronnoy-itil-system.firebasestorage.app",
-  messagingSenderId: "585102849418",
-  appId: "1:585102849418:web:b5639b0e0915b93dca4473"
+  apiKey: "AIzaSyDYt8ZXnlM9GVzsxS8q8d0L6N-pOHfsNJQ",
+  authDomain: "bronnoyhelseitil.firebaseapp.com",
+  projectId: "bronnoyhelseitil",
+  storageBucket: "bronnoyhelseitil.firebasestorage.app",
+  messagingSenderId: "302475397437",
+  appId: "1:302475397437:web:bf5b5872701e13f42ddd54"
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
